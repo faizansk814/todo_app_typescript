@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 h-screen justify-center">
+    <h1 class="text-3xl font-bold flex items-center justify-center mb-10 mt-5">
+        Todo App!
+    </h1>
+    <div class="flex ml-60">
+        <div class="flex-auto max-w-md mx-2 p-6 bg-white shadow-md rounded-md mr-10 mb-10">
+            <label class="block mb-2 font-medium">Enter Your Task:</label>
+            <input type="text" class="w-full p-2 border rounded-md focus:ring focus:ring-blue-300"
+                placeholder="Type here..." id="inp">
+            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 block mx-auto"
+                id="btn">Submit</button>
+        </div>
+        
+        <div class="flex-auto max-w-md mx-2 p-6 bg-white shadow-md rounded-md mr-10 mb-10">
+            <label class="block mb-2 font-medium">Edit Your Task:</label>
+            <input type="number" class="w-full p-2 border rounded-md focus:ring focus:ring-blue-300 mb-7"
+                placeholder="Type here..." id="edid">
+            <input type="text" class="w-full p-2 border rounded-md focus:ring focus:ring-blue-300"
+                placeholder="Type here..." id="edtask">
+            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 block mx-auto"
+                id="btnedit">Submit</button>
+        </div>
+    </div>
+    
+    <div class="max-w-2xl mx-auto p-6 bg-white shadow-md rounded-md" id="box">
+        <h1 class="text-3xl font-bold mb-4">Todo List</h1>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
