@@ -6,6 +6,7 @@ const edid = document.getElementById('edid') as HTMLInputElement;
 const taskinp=document.getElementById('edtask') as HTMLInputElement;
 const editbtn = document.getElementById('btnedit') as HTMLButtonElement;
 
+
 btnel.addEventListener('click', () => {
     console.log(idinp.value)
     interface Todo {
@@ -36,11 +37,11 @@ btnel.addEventListener('click', () => {
 });
 editbtn.addEventListener('click',()=>{
     interface Update{
-        id:any
+        id:number
         task:string
     }
     let obj:Update={
-        id:edid.value,
+        id:parseInt(edid.value),
         task:taskinp.value
     }
     fetch(`http://localhost:3000/data/${edid.value}`,{
@@ -50,7 +51,7 @@ editbtn.addEventListener('click',()=>{
         },
         body:JSON.stringify(obj)
     })
-        .then((res) => {
+        .then((res:Response) => {
             return res.json()
         })
         .then((data) => {

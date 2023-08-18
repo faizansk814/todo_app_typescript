@@ -31,7 +31,7 @@ btnel.addEventListener('click', () => {
 });
 editbtn.addEventListener('click', () => {
     let obj = {
-        id: edid.value,
+        id: parseInt(edid.value),
         task: taskinp.value
     };
     fetch(`http://localhost:3000/data/${edid.value}`, {
